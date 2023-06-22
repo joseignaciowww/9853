@@ -1,0 +1,58 @@
+  /* Agrega estilos personalizados aquí */
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: #153ce6;
+    padding: 20px;
+    color: #fff;
+}
+.main-nav {
+    text-align: right;
+}
+.main-nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.main-nav li {
+    display: inline-block;
+    margin-left: 10px;
+}
+.main-nav li a {
+    padding: 5px 10px;
+    background-color: #153ce6;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+}
+.main-nav li input {
+    margin-left: 10px;
+}
+main {
+    padding: 20px;
+}
+footer {
+    background-color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+}
+.main-nav a:hover{
+    background-color: #0e1977;
+    
+}
+.texto{
+    text-align: center;
+}
+.relleno{
+    display: flex ; 
+    align-items:center;
+    flex-direction:column;
+
+}
+.imagen{
+    width:20% ;
+    height:20% ;
+}
