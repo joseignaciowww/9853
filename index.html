@@ -6,6 +6,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi página</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .main-nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .main-nav li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .main-nav a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .main-nav a:hover {
+            color: blue;
+        }
+
+        .relleno {
+            position: sticky;
+            top: 0;
+            background-color: #f1f1f1;
+            padding: 20px;
+            text-align: center;
+            transform: rotate(5deg);
+            animation: rotateAnimation 2s infinite linear;
+        }
+
+        .relleno::after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            margin: 10px auto;
+            border-radius: 50%;
+        }
+
+        .relleno p:first-child {
+            font-weight: bold;
+        }
+
+        .relleno p:last-child {
+            font-style: italic;
+        }
+
+        @keyframes rotateAnimation {
+            0% {
+                transform: rotate(5deg);
+            }
+            50% {
+                transform: rotate(-5deg);
+            }
+            100% {
+                transform: rotate(5deg);
+            }
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 18px;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -13,7 +86,8 @@
             <ul>
                 <li>
                     <input type="text" placeholder="Ingresa un juego" id="myInput">
-                    <a href="#">Home</a></li>
+                    <a href="#">Home</a>
+                </li>
                 <li><a href="#">Work</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
@@ -26,13 +100,12 @@
             <p class="texto">En "Proyecto", podrás divertirte con muchos juegos.</p>
             <p class="texto">Elige el juego que quieres jugar.</p>
         </div>
-        
     </main>
     <div>
         <p>Disfruta</p>
     </div>
-    </body>
     <footer>
         <iframe width="700px" height="500px" allow="fullscreen; autoplay; encrypted-media" src="https://games.construct.net/769/latest" frameborder="0" allowfullscreen="true" msallowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" allowpaymentrequest="false" referrerpolicy="unsafe-url" sandbox="allow-same-origin allow-forms allow-scripts allow-pointer-lock allow-orientation-lock allow-popups" scrolling="no"></iframe>
     </footer>
-    
+</body>
+</html>
