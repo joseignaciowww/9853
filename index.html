@@ -1,111 +1,42 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi página</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
-    <style>
-        .main-nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        .main-nav li {
-            display: inline-block;
-            margin-right: 10px;
-        }
-
-        .main-nav a {
-            text-decoration: none;
-            color: #333;
-        }
-
-        .main-nav a:hover {
-            color: blue;
-        }
-
-        .relleno {
-            position: sticky;
-            top: 0;
-            background-color: #f1f1f1;
-            padding: 20px;
-            text-align: center;
-            transform: rotate(5deg);
-            animation: rotateAnimation 2s infinite linear;
-        }
-
-        .relleno::after {
-            content: '';
-            display: block;
-            width: 100px;
-            height: 100px;
-            background-color: red;
-            margin: 10px auto;
-            border-radius: 50%;
-        }
-
-        .relleno p:first-child {
-            font-weight: bold;
-        }
-
-        .relleno p:last-child {
-            font-style: italic;
-        }
-
-        @keyframes rotateAnimation {
-            0% {
-                transform: rotate(5deg);
-            }
-            50% {
-                transform: rotate(-5deg);
-            }
-            100% {
-                transform: rotate(5deg);
-            }
-        }
-
-        footer {
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-
-        footer p {
-            margin: 0;
-            font-size: 18px;
-        }
-    </style>
+    <title>Práctica</title>
 </head>
 <body>
-    <header>
-        <nav class="main-nav">
-            <ul>
-                <li>
-                    <input type="text" placeholder="Ingresa un juego" id="myInput">
-                    <a href="#">Home</a>
+<div class="wrapper">
+    <!--Un formulario de compra-->
+    <h2 class="wrapper__title">¡inicia sesion!</h2>
+    <form id="loginForm" action="javascript:void(0);" onsubmit="validarFormulario()"></form>
+        <div class="user">
+            <ul class="user-info">
+                <li class="user-info__item" >
+                    <label for="nombre">Nombre completo</label>
+                    <input type="text" id="nombre" name="nombre" required><br><br>
                 </li>
-                <li><a href="#">Work</a></li>
-                <li><a href="#">Contact</a></li>
+                <li class="user-info__item">
+                    <!--añadir un campo de entrada aquí-->
+                    <label for="contraseña" >contraseña</label>
+                    <input type="text" id="nombre" name="contrasena" required><br><br>
+                </li>
+                <h3 class="genero">genero (opcional)</h3>
             </ul>
-        </nav>
-    </header>
-    <main>
-        <div class="relleno">
-            <h1 class="PROYECTO">PROYECTO</h1>
-            <img src="1 - copia.png" alt="" class="imagen">
-            <p class="texto">En "Proyecto", podrás divertirte con muchos juegos.</p>
-            <p class="texto">Elige el juego que quieres jugar.</p>
+            <label for="courier" class="hombre">hombre</label>
+                    <input type="radio" name="radio" id="courier" class="hombreboton">
+            <label for="courier" class="mujer">mujer</label>
+                    <input type="radio" name="radio" id="courier" class="mujerboton">
+                    <a href="http://127.0.0.1:5500/inicio.html" class="login-button" onclick="validarFormulario(); return false;">Ingresa</a>
+            
+            <p class="boton-registro">registrate</p>
         </div>
-    </main>
-    <div>
-        <p>Disfruta</p>
-    </div>
-    <footer>
-        <iframe width="700px" height="500px" allow="fullscreen; autoplay; encrypted-media" src="https://games.construct.net/769/latest" frameborder="0" allowfullscreen="true" msallowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" allowpaymentrequest="false" referrerpolicy="unsafe-url" sandbox="allow-same-origin allow-forms allow-scripts allow-pointer-lock allow-orientation-lock allow-popups" scrolling="no"></iframe>
-    </footer>
+    </form>
+    <script src="js/validacion.js"></script>
+</div>
+
 </body>
 </html>
